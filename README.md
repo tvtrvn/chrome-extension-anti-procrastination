@@ -17,7 +17,7 @@ A production-ready Chrome Extension (Manifest V3) that helps you stay focused wi
 1. Open Chrome and go to **chrome://extensions**.
 2. Turn on **Developer mode** (toggle in the top-right).
 3. Click **Load unpacked**.
-4. Select the folder that contains this project (e.g. `my-procrastination-extension-app`).
+4. Select the folder that contains this project (e.g. zip this project: `my-procrastination-extension-app`).
 5. The extension should appear in the toolbar. Click the puzzle icon and pin **Anti-Procrastination Session** if you like.
 
 ---
