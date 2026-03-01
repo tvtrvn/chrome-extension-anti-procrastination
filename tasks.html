@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tasks – Anti-Procrastination Session</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="tasks-page">
+    <h1>Tasks</h1>
+    <section aria-labelledby="tasks-list-heading">
+      <h2 id="tasks-list-heading" class="sr-only">Your tasks</h2>
+      <ul class="tasks-list tasks-list-full" id="tasks-list" aria-label="Task list"></ul>
+      <div class="add-task-row">
+        <input type="text" id="task-input" placeholder="New task..." aria-label="New task description" />
+        <button type="button" class="btn btn-primary" id="btn-add-task" aria-label="Add task">Add</button>
+      </div>
+    </section>
+  </div>
+  <script src="tasks.js"></script>
+</body>
+</html>

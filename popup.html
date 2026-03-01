@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=360, initial-scale=1" />
+  <title>Anti-Procrastination Session</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="popup">
+    <!-- 1) Status + remaining time -->
+    <section aria-labelledby="status-heading">
+      <h2 id="status-heading">Status</h2>
+      <div class="status-row">
+        <span class="status-dot inactive" id="status-dot" aria-hidden="true"></span>
+        <span id="status-text" aria-live="polite">Session inactive</span>
+      </div>
+      <div class="timer-display idle" id="timer-display" aria-live="polite">--:--</div>
+    </section>
+
+    <!-- 2) Timer controls -->
+    <section aria-labelledby="timer-heading">
+      <h2 id="timer-heading">Session duration</h2>
+      <div class="timer-presets">
+        <button type="button" class="btn btn-ghost" data-minutes="25" aria-label="25 minutes">25 min</button>
+        <button type="button" class="btn btn-ghost" data-minutes="50" aria-label="50 minutes">50 min</button>
+      </div>
+      <div class="timer-custom">
+        <label for="custom-minutes">Custom (1–180 min, max 3 hr)</label>
+        <input type="number" id="custom-minutes" min="1" max="180" value="25" aria-label="Custom duration in minutes" />
+        <span>min</span>
+      </div>
+    </section>
+
+    <!-- 3) Start / End session -->
+    <section aria-labelledby="session-heading">
+      <h2 id="session-heading">Session</h2>
+      <div class="session-buttons">
+        <button type="button" class="btn btn-primary" id="btn-start" aria-label="Start focus session">Start session</button>
+        <button type="button" class="btn btn-danger" id="btn-end" aria-label="End focus session" disabled>End session</button>
+      </div>
+      <label class="setting-row" style="margin-top: 10px; display: flex; align-items: center; gap: 8px;">
+        <input type="checkbox" id="setting-open-complete-tab" aria-label="Open Session complete tab when timer ends" />
+        <span>Open &quot;Session complete&quot; tab when timer ends</span>
+      </label>
+    </section>
+
+    <!-- 4) Tasks -->
+    <section aria-labelledby="tasks-heading">
+      <h2 id="tasks-heading">Tasks</h2>
+      <ul class="tasks-list" id="tasks-list" aria-label="Task list"></ul>
+      <div class="add-task-row">
+        <input type="text" id="task-input" placeholder="New task..." aria-label="New task description" />
+        <button type="button" class="btn btn-ghost" id="btn-add-task" aria-label="Add task">Add</button>
+      </div>
+      <button type="button" class="btn btn-ghost" id="btn-open-tasks" style="margin-top: 8px; width: 100%;">Open Tasks Tab</button>
+    </section>
+
+    <!-- 5) Site blocking -->
+    <section aria-labelledby="blocking-heading">
+      <h2 id="blocking-heading">Block sites during session</h2>
+      <div class="block-toggle-row">
+        <span>Block distracting sites</span>
+        <button type="button" class="toggle-switch" id="toggle-block" role="switch" aria-checked="true" aria-label="Toggle site blocking"></button>
+      </div>
+      <div class="add-site-row">
+        <input type="text" id="site-input" placeholder="e.g. youtube.com" aria-label="Domain to block" />
+        <button type="button" class="btn btn-ghost" id="btn-add-site" aria-label="Add blocked site">Add</button>
+      </div>
+      <ul class="blocked-sites-list" id="blocked-sites-list" aria-label="Blocked domains"></ul>
+    </section>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
