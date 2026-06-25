@@ -42,6 +42,13 @@ This project is indexed by GitNexus as **chrome-extension-anti-procrastination**
 
 <!-- gitnexus:end -->
 
+## Project rules
+
+- **Purpose:** a Chrome browser extension (Manifest V3) for anti-procrastination focus sessions — AFK idle nudge, site blocking, and a countdown timer.
+- **Layout:** `manifest.json` (MV3 config) wires `background.js` (service worker) and `popup.html`/`popup.js` (toolbar UI); `tasks.html`/`tasks.js` (Tasks tab), `blocked.html`/`blocked.js` (block page), `styles.css` (shared styles).
+- **Build / test:** no build step — load unpacked in `chrome://extensions` (Developer mode → Load unpacked → select project folder).
+- **Do / don't:** manifest.json references files by path — do NOT move source files without updating manifest + HTML script tags. Global coding standards live in `~/.claude/CLAUDE.md`.
+
 <!-- skills:start -->
 ## Available Skills
 
