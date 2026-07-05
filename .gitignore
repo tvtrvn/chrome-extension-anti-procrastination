@@ -4,3 +4,4 @@
 node_modules/
 .gitnexus/
 .claude/settings.local.json
+.claude/skills/gitnexus/
